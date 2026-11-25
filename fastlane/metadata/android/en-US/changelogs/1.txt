@@ -1,0 +1,1 @@
+First release: an adaptive daily budget with quick add, recurring spends, widgets, shortcuts, a Quick Settings tile, reply-to-log reminders, optional payment spotting from notifications, insights and an activity history. Offline and private.

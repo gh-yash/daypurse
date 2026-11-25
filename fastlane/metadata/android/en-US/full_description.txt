@@ -1,0 +1,36 @@
+DayPurse turns your budget into one simple number: what you can spend today.
+
+Set a weekly, monthly or custom budget and DayPurse spreads it across the days. Spend more today and tomorrow's limit drops; spend less and it rises. No spreadsheets, no bank login.
+
+<b>Private by design</b>
+• No internet permission: the app can't send your data anywhere
+• No accounts, ads, analytics or trackers
+• Everything stays on your phone; export a backup whenever you like
+
+<b>Log a spend in a second</b>
+• Quick add: spends you repeat become one-tap buttons, with Undo
+• Home-screen widgets, launcher shortcuts and a Quick Settings tile
+• Reply to the daily reminder with "120 food" without opening the app
+• Recurring spends like rent and subscriptions are added automatically
+
+<b>Payments from notifications (optional)</b>
+Turn it on and DayPurse spots payments in your UPI apps, bank apps and bank text messages, then asks whether to log them. Nothing is added until you tap Log, and it remembers the category you use for each payee. Notifications are read on your phone; only the amount, payee, app and time are kept.
+
+<b>Budgets that fit your life</b>
+• A main daily budget plus extra ones for trips, festivals or gifts
+• Weekly, monthly (any start day, like payday) or custom dates
+• Carry leftover money over, pause a budget, or let it repeat
+
+<b>See where it goes</b>
+• History by month with budget and category filters
+• Insights: daily chart and category breakdown
+• Activity history of everything you added, changed or deleted, with restore
+
+<b>Also</b>
+• Categories you can hide, reorder or create
+• Any currency, or none
+• App lock with fingerprint or face
+• Light and dark themes, accent colours, pure black
+• JSON backup and restore, CSV export
+
+DayPurse is free and open source (GPL-3.0). Source code: https://github.com/gh-yash/daypurse

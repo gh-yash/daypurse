@@ -1,0 +1,44 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: And what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open …
+        2. Tap …
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Settings → About
+    validations:
+      required: true
+  - type: input
+    id: android
+    attributes:
+      label: Phone and Android version
+      placeholder: Pixel 8, Android 16
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Installed from
+      options: [Google Play, F-Droid, GitHub release, Built from source]
+  - type: textarea
+    id: notification
+    attributes:
+      label: Payment notification text (if a payment wasn't spotted correctly)
+      description: Paste the notification text. Remove account numbers and anything you don't want to share.
