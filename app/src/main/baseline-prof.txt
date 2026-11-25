@@ -1,0 +1,6 @@
+# Baseline profile: tells Android to compile these methods ahead of time at install, so the
+# first launch and first scroll don't run in the slower interpreter/JIT.
+# Compose, Room and other libraries ship their own profiles; this adds the app's own code.
+# (Wildcards are fine here: the app is small, so compiling all of it costs little.)
+HSPLbizappz/daypurse/**->**(**)**
+Lbizappz/daypurse/**;

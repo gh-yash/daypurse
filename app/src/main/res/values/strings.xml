@@ -1,0 +1,448 @@
+<resources>
+    <string name="app_name">DayPurse</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_history">History</string>
+    <string name="nav_insights">Insights</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Common actions -->
+    <string name="action_back">Back</string>
+    <string name="action_save">Save</string>
+    <string name="action_ok">OK</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_change">Change</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_backspace">Backspace</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_done">Done</string>
+    <string name="action_more">More options</string>
+
+    <!-- Days -->
+    <string name="day_today">Today</string>
+    <string name="day_yesterday">Yesterday</string>
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+
+    <!-- Budget types -->
+    <string name="budget_weekly">Weekly</string>
+    <string name="budget_monthly">Monthly</string>
+    <string name="budget_custom">Custom</string>
+
+    <!-- Budget setup -->
+    <string name="setup_title_new">Set up your budget</string>
+    <string name="setup_title_edit">Edit budget</string>
+    <string name="setup_intro">Choose how much you want to spend and over what period. We\'ll split it into a daily limit that adjusts as you go.</string>
+    <string name="setup_private">Private: no account, no internet. Everything stays on this phone.</string>
+    <string name="setup_restore">Restore from a backup</string>
+    <string name="setup_period">Budget period</string>
+    <string name="setup_amount">Budget amount</string>
+    <string name="setup_week_starts">Week starts on</string>
+    <string name="setup_month_starts">Month starts on</string>
+    <string name="setup_day_of_month">Day %d</string>
+    <string name="setup_month_clamp_hint">In shorter months the budget starts on the last day of the month.</string>
+    <string name="setup_custom_range">Dates</string>
+    <string name="setup_options">Options</string>
+    <plurals name="setup_range_too_long">
+        <item quantity="one">A custom budget can be at most %d day.</item>
+        <item quantity="other">A custom budget can be at most %d days.</item>
+    </plurals>
+    <string name="setup_repeat">Repeat automatically</string>
+    <string name="setup_repeat_hint">Start a new period with the same amount when this one ends</string>
+    <string name="setup_carry_over">Carry over leftover</string>
+    <string name="setup_carry_over_hint">Add unspent money (or subtract overspending) to the next period</string>
+    <string name="setup_preview_title">Your first period</string>
+    <string name="setup_preview_this_period">This period</string>
+    <string name="setup_preview_this_period_hint">Changes apply to the current period right away; spends so far still count.</string>
+    <string name="setup_preview_new_plan">New plan starts today</string>
+    <string name="setup_preview_new_plan_on">New plan starts %s</string>
+    <string name="setup_preview_new_plan_later_hint">Your current budget continues until %s, then this plan takes over.</string>
+    <string name="setup_preview_new_plan_past_hint">Spends from the start date onwards count towards this plan.</string>
+    <string name="setup_preview_new_plan_hint">Your current period ends yesterday and this plan takes over from today.</string>
+    <string name="setup_preview_per_day">≈ %s per day</string>
+    <string name="setup_prorated_hint">You\'re starting partway through, so this period gets a share of the full amount.</string>
+    <string name="setup_start">Start budgeting</string>
+
+    <!-- Currency -->
+    <string name="currency_title">Currency</string>
+    <string name="currency_search">Search currency</string>
+    <string name="currency_none">No currency</string>
+    <string name="currency_none_hint">Show plain numbers only</string>
+
+    <!-- Home -->
+    <string name="home_left_today">Left today</string>
+    <string name="home_over_today">Over today\'s limit by</string>
+    <string name="home_daily_limit">Daily limit %1$s · spent %2$s</string>
+    <string name="home_tomorrow">Tomorrow\'s limit: %s</string>
+    <string name="home_tomorrow_drops">Tomorrow\'s limit drops to %s</string>
+    <string name="home_budget_exhausted">This period\'s budget is used up.</string>
+    <string name="home_left_week">Left this week</string>
+    <string name="home_left_month">Left this month</string>
+    <string name="home_left_period">Left this period</string>
+    <string name="home_spent">Spent</string>
+    <string name="home_budget">Budget</string>
+    <string name="home_days_left">Left</string>
+    <string name="home_carry_in_plus">Includes %s carried over from last period</string>
+    <string name="home_carry_in_minus">Reduced by %s overspent last period</string>
+    <string name="home_empty_today">No spends yet today. Tap Add spend to log one.</string>
+    <string name="home_edit_budget">Edit budget</string>
+    <string name="home_not_started">Your budget starts on %s.</string>
+    <string name="home_ended">This budget has ended.</string>
+    <string name="home_start_new">Start a new budget</string>
+
+    <!-- Spend editor -->
+    <string name="spend_add_title">Add spend</string>
+    <string name="spend_edit_title">Edit spend</string>
+    <string name="spend_usual">Usual</string>
+    <string name="spend_more">More</string>
+    <string name="spend_less">Less</string>
+    <string name="spend_note_hint">Note (optional)</string>
+    <string name="spend_add_note">Add note</string>
+    <string name="spend_save">Add</string>
+    <string name="category_none">Uncategorized</string>
+
+    <!-- History -->
+    <string name="history_total">Spent %s</string>
+    <string name="history_prev_month">Previous month</string>
+    <string name="history_next_month">Next month</string>
+    <string name="history_all">All</string>
+    <string name="history_empty">No spends this month</string>
+    <string name="history_deleted">Spend deleted</string>
+
+    <!-- Categories -->
+    <string name="categories_title">Categories</string>
+    <string name="categories_add">Add category</string>
+    <string name="categories_default">Default</string>
+    <string name="categories_hide">Hide</string>
+    <string name="categories_drag">Drag to reorder</string>
+    <string name="categories_reorder_hint">Drag ⋮⋮ to change the order. The add-spend sheet and filters follow this order.</string>
+    <string name="categories_show">Show</string>
+    <string name="categories_hidden_count">Hidden (%d)</string>
+    <string name="categories_restore_defaults">Restore default categories</string>
+    <string name="category_hidden_msg">%s hidden</string>
+    <string name="category_deleted_msg">%s deleted</string>
+    <string name="category_name">Name</string>
+    <string name="category_name_error">Name is empty or already used</string>
+    <string name="category_color">Colour</string>
+    <string name="category_icon">Icon</string>
+    <plurals name="categories_count">
+        <item quantity="one">%d category</item>
+        <item quantity="other">%d categories</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings_section_budget">Budget</string>
+    <string name="settings_section_appearance">Appearance</string>
+    <string name="settings_section_reminder">Reminder</string>
+    <string name="settings_section_security">Security</string>
+    <string name="settings_section_data">Data</string>
+    <string name="settings_section_about">About</string>
+    <string name="settings_theme">Theme</string>
+    <string name="theme_system">System default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="settings_accent">Accent colour</string>
+    <string name="settings_pure_black">Pure black</string>
+    <string name="settings_pure_black_hint">Black background in dark theme, saves battery on OLED screens</string>
+    <string name="settings_reminder">Daily reminder</string>
+    <string name="settings_reminder_hint">A nudge to log today\'s spends</string>
+    <string name="settings_reminder_time">Reminder time</string>
+    <string name="settings_app_lock">App lock</string>
+    <string name="settings_app_lock_hint">Ask for fingerprint, face or screen lock when opening the app</string>
+    <string name="settings_app_lock_unavailable">Set up a screen lock on your phone to use this</string>
+    <string name="settings_export">Export backup</string>
+    <string name="settings_export_hint">Save all data to a file you choose</string>
+    <string name="settings_import">Import backup</string>
+    <string name="settings_import_hint">Replace all data with a backup file</string>
+    <string name="settings_export_csv">Export spends as CSV</string>
+    <string name="settings_export_csv_hint">Open in Excel or Google Sheets</string>
+    <string name="settings_reset">Reset all data</string>
+    <string name="settings_reset_hint">Delete budgets, spends, history and custom categories</string>
+    <string name="settings_about">Version %s · Works fully offline, your data never leaves this phone</string>
+    <string name="about_source">Source code</string>
+    <string name="about_source_hint">Free and open source (GPL-3.0) on GitHub</string>
+    <string name="about_privacy">Privacy policy</string>
+    <string name="about_privacy_hint">Nothing is collected or shared</string>
+    <string name="about_issue">Report a problem or suggest an idea</string>
+    <string name="about_issue_hint">Opens the issue tracker on GitHub</string>
+    <string name="about_licenses">Open-source licences</string>
+    <string name="about_licenses_hint">Libraries used in the app</string>
+    <string name="licenses_app">DayPurse is free software under the GNU General Public License v3.0 or later. It uses:</string>
+    <string name="import_confirm">This replaces all budgets, spends and categories on this phone with the backup. This can\'t be undone.</string>
+    <string name="import_confirm_action">Replace data</string>
+    <string name="reset_confirm">This permanently deletes all budgets, spends, recurring spends, activity history and custom categories. Export a backup first if you might need them.</string>
+    <string name="reset_confirm_action">Delete everything</string>
+    <string name="backup_exported">Backup saved</string>
+    <string name="backup_csv_exported">CSV saved</string>
+    <string name="backup_imported">Backup restored</string>
+    <string name="backup_failed">Something went wrong</string>
+    <string name="reset_done">All data deleted</string>
+
+    <!-- Insights -->
+    <string name="insights_empty">Insights appear once your budget has started</string>
+    <string name="insights_older">Previous period</string>
+    <string name="insights_newer">Next period</string>
+    <string name="insights_avg_day">Avg / day</string>
+    <string name="insights_daily">Daily spending</string>
+    <string name="insights_daily_hint">Dashed line: even split of %s per day. Red bars are above it.</string>
+    <string name="insights_by_category">By category</string>
+    <string name="insights_no_spends">No spends in this period yet</string>
+
+    <!-- Reminder -->
+    <string name="reminder_channel">Daily reminder</string>
+    <string name="reminder_title">Log today\'s spends</string>
+    <string name="reminder_text_left">You have %s left for today</string>
+    <string name="reminder_text_over">You\'re %s over today\'s limit</string>
+    <string name="reminder_text_plain">Keep your budget up to date</string>
+
+    <!-- App lock -->
+    <string name="lock_title">DayPurse is locked</string>
+    <string name="lock_unlock">Unlock</string>
+    <string name="lock_prompt_title">Unlock DayPurse</string>
+    <string name="lock_prompt_subtitle">Use fingerprint, face or screen lock</string>
+
+    <!-- Multiple budgets -->
+    <string name="budgets_title">Budgets</string>
+    <string name="budget_new_title">New budget</string>
+    <string name="budget_create">Create budget</string>
+    <string name="budget_template">Start from</string>
+    <string name="template_festival">Festival</string>
+    <string name="template_vacation">Vacation</string>
+    <string name="template_wedding">Wedding</string>
+    <string name="template_gifts">Gifts</string>
+    <string name="template_custom">Custom</string>
+    <string name="budget_name">Name</string>
+    <string name="budget_name_hint">e.g. Goa trip</string>
+    <string name="budget_daily_split">Daily limit</string>
+    <string name="budget_daily_split_hint">Split into a daily allowance that adjusts as you spend</string>
+    <string name="budget_soft_per_day">≈ %s per day if spread evenly</string>
+    <string name="budget_left">Left</string>
+    <string name="budget_over_total">Over budget by</string>
+    <string name="budget_left_of">%1$s left of %2$s</string>
+    <string name="budget_spent_of">Spent %1$s of %2$s</string>
+    <string name="budget_starts_on">Starts %s</string>
+    <string name="budget_ended_summary">Ended · spent %1$s of %2$s</string>
+    <string name="budget_paused">Paused</string>
+    <string name="budget_paused_until">Paused until %s</string>
+    <string name="budget_paused_indefinitely">Paused until you resume</string>
+    <string name="budget_paused_hint">No daily limit while paused. The money is spread over your active days.</string>
+    <string name="budget_resume">Resume</string>
+    <string name="budget_pause">Pause</string>
+    <string name="budget_pause_title">Pause %s</string>
+    <string name="budget_pause_until_resume">Until I resume</string>
+    <string name="budget_pause_until_date">Until a date</string>
+    <string name="budget_pause_pick_date">Pause until %s</string>
+    <string name="budget_delete_title">Delete %s?</string>
+    <plurals name="budget_delete_has_spends">
+        <item quantity="one">It has %1$d spend. Move it to %2$s, or delete it with the budget?</item>
+        <item quantity="other">It has %1$d spends. Move them to %2$s, or delete them with the budget?</item>
+    </plurals>
+    <string name="budget_delete_empty">This can\'t be undone.</string>
+    <string name="budget_delete_move">Move spends to %s</string>
+    <string name="budget_delete_all">Delete spends too</string>
+    <string name="budget_delete_confirm">Delete</string>
+    <string name="budget_other">Other budgets</string>
+    <string name="budget_add_card">Plan a trip or festival</string>
+    <string name="budget_ended_section">Ended</string>
+    <string name="budget_spends_this_period">This period</string>
+    <string name="budget_no_spends">No spends yet</string>
+    <string name="budget_all">All budgets</string>
+    <string name="budget_days_left">%s left</string>
+
+    <!-- Quick add -->
+    <string name="quick_title">Quick add</string>
+    <string name="quick_hint">Tap to add · hold for more</string>
+    <string name="quick_added">Added %1$s · %2$s</string>
+    <string name="quick_no_budget">No budget is running today, so nothing was added</string>
+    <string name="quick_hidden">Won\'t suggest that again</string>
+    <string name="quick_edit_first">Edit before adding</string>
+    <string name="quick_stop_suggesting">Stop suggesting</string>
+    <string name="quick_add_cd">Add %1$s, %2$s</string>
+    <string name="quick_more_cd">More options</string>
+
+    <!-- Detected payments: Home list -->
+    <string name="inbox_title">To review</string>
+    <string name="inbox_unknown_payee">Payment</string>
+    <string name="inbox_ignore">Ignore</string>
+    <string name="inbox_log">Log</string>
+    <string name="inbox_choose">Choose…</string>
+    <plurals name="inbox_more">
+        <item quantity="one">+ %d more</item>
+        <item quantity="other">+ %d more</item>
+    </plurals>
+    <string name="inbox_logged">Logged %1$s · %2$s</string>
+    <string name="inbox_ignored">Ignored %s</string>
+
+    <!-- Repeat -->
+    <string name="repeat_chip">Repeat</string>
+    <string name="repeat_none">Doesn\'t repeat</string>
+    <string name="repeat_weekly">Every week</string>
+    <string name="repeat_monthly">Every month</string>
+    <string name="repeat_yearly">Every year</string>
+    <string name="repeat_hint">Added again automatically on %s, and so on</string>
+    <string name="spend_repeats_cd">Repeats</string>
+
+    <!-- Recurring spends screen -->
+    <string name="recurring_title">Recurring spends</string>
+    <string name="recurring_empty_title">Nothing repeats yet</string>
+    <string name="recurring_empty">When you add a spend, tap Repeat to have rent, bills or subscriptions added automatically.</string>
+    <string name="recurring_next">Next on %s</string>
+    <string name="recurring_paused">Paused</string>
+    <string name="recurring_pause">Pause</string>
+    <string name="recurring_resume">Resume</string>
+    <string name="recurring_skip">Skip next one</string>
+    <string name="recurring_skipped">Skipped %s</string>
+    <string name="recurring_delete">Stop repeating</string>
+    <string name="recurring_deleted">Stopped. Spends already added stay.</string>
+    <string name="recurring_edit_title">Edit recurring spend</string>
+    <string name="recurring_amount">Amount</string>
+    <string name="recurring_budget_main">Main budget</string>
+    <plurals name="recurring_count">
+        <item quantity="one">%d active</item>
+        <item quantity="other">%d active</item>
+    </plurals>
+    <string name="recurring_none">None yet</string>
+
+    <!-- Reminder: reply from the notification -->
+    <string name="reminder_action_log">Log a spend</string>
+    <string name="reminder_reply_hint">e.g. 120 food</string>
+    <string name="reminder_logged">Added %1$s · %2$s</string>
+    <string name="reminder_reply_failed">Couldn\'t find an amount. Try “120 food”.</string>
+    <string name="reminder_no_budget">No budget is running today</string>
+    <string name="settings_reminder_skip">Skip if I\'ve logged today</string>
+    <string name="settings_reminder_skip_hint">No reminder on days you\'ve already added something</string>
+
+    <!-- Shortcuts, tile, widget -->
+    <string name="shortcut_add">Add spend</string>
+    <string name="shortcut_add_long">Add a spend</string>
+    <string name="tile_label">Add spend</string>
+    <string name="tile_left">%s left today</string>
+    <string name="tile_over">%s over today</string>
+    <string name="widget_left_today">Left today</string>
+    <string name="widget_over_today">Over today\'s limit</string>
+    <string name="widget_left_period">Left this period</string>
+    <string name="widget_paused">Paused</string>
+    <string name="widget_locked">Open the app to see your budget</string>
+    <string name="widget_no_budget">Set up a budget</string>
+    <string name="widget_spent_of">%1$s spent of %2$s</string>
+    <string name="widget_add_cd">Add a spend</string>
+    <string name="widget_small_name">Today\'s budget</string>
+    <string name="widget_large_name">Budget &amp; quick add</string>
+    <!-- Shown only in the widget picker preview. -->
+    <string name="widget_preview_amount">865</string>
+    <string name="spend_paid_to">Paid to %s</string>
+    <string name="widget_small_desc">How much is left today, and a button to add a spend</string>
+    <string name="widget_large_desc">Today\'s budget with your quick-add spends</string>
+
+    <!-- Payment notifications -->
+    <string name="settings_section_payments">Payments</string>
+    <string name="payments_title">Payment notifications</string>
+    <string name="payments_hint_off">Spot payments in UPI and bank notifications</string>
+    <plurals name="payments_hint_on">
+        <item quantity="one">On · reading %d app</item>
+        <item quantity="other">On · reading %d apps</item>
+    </plurals>
+    <string name="payments_hint_no_access">Needs notification access</string>
+    <string name="payments_intro">DayPurse can spot payments in notifications from your UPI apps, bank apps and bank text messages, then ask whether to log them.</string>
+    <string name="payments_privacy">Read on this phone only, never sent anywhere. Only the amount, payee, app and time are kept, and nothing is logged until you tap Log.</string>
+    <string name="payments_switch">Spot payments</string>
+    <string name="payments_access_title">Allow notification access</string>
+    <string name="payments_access_text">Android lets you allow this in system settings. Find DayPurse in the list and turn it on.</string>
+    <string name="payments_access_open">Open settings</string>
+    <string name="payments_restricted">Switch greyed out? For apps installed outside the Play Store, Android needs one more step: App info → ⋮ (top right) → Allow restricted settings. Then try again.</string>
+    <string name="payments_app_info">App info</string>
+    <string name="payments_access_revoke">To stop all reading, also turn off notification access in system settings.</string>
+    <string name="payments_notify">Ask with a notification</string>
+    <string name="payments_notify_hint">Also show a notification with Log and Ignore. Payments always wait in “To review” on Home.</string>
+    <string name="payments_sources">Read from</string>
+    <string name="payments_group_upi">UPI apps</string>
+    <string name="payments_group_bank">Bank apps</string>
+    <string name="payments_group_sms">Bank text messages</string>
+    <string name="payments_none_installed">None of the supported payment apps are installed.</string>
+    <string name="payments_channel">Spotted payments</string>
+    <string name="payments_notif_title">%1$s to %2$s</string>
+    <string name="payments_notif_title_no_payee">%s paid</string>
+    <string name="payments_notif_text">Log it as %1$s? · %2$s</string>
+    <string name="payments_notif_text_choose">Log it to your budget? · %s</string>
+    <string name="payments_notif_log">Log</string>
+    <string name="payments_notif_choose">Choose category</string>
+    <string name="payments_notif_ignore">Ignore</string>
+    <string name="payments_notif_logged">Logged %1$s · %2$s</string>
+
+    <!-- Activity history -->
+    <string name="activity_title">Activity</string>
+    <string name="settings_activity">Activity history</string>
+    <string name="settings_activity_hint">What you added, changed or deleted · kept %s</string>
+    <string name="activity_keep">Keep history for</string>
+    <plurals name="activity_keep_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <string name="activity_keep_year">1 year</string>
+    <string name="activity_keep_forever">Forever</string>
+    <string name="activity_clear">Clear history</string>
+    <string name="activity_clear_confirm">Clear all activity history? Your spends and budgets stay as they are.</string>
+    <string name="activity_cleared">History cleared</string>
+    <string name="activity_search">Search notes, categories, payees</string>
+    <string name="activity_empty">No activity yet</string>
+    <string name="activity_empty_hint">Everything you add, change or delete shows up here.</string>
+    <string name="activity_empty_filtered">Nothing matches these filters</string>
+    <string name="activity_filter_all">All</string>
+    <string name="activity_kind_spend">Spends</string>
+    <string name="activity_kind_budget">Budgets</string>
+    <string name="activity_kind_category">Categories</string>
+    <string name="activity_kind_recurring">Recurring</string>
+    <string name="activity_kind_payment">Payments</string>
+    <string name="activity_kind_settings">Settings</string>
+    <string name="activity_kind_data">Backups</string>
+    <string name="activity_range_today">Today</string>
+    <string name="activity_range_week">Last 7 days</string>
+    <string name="activity_range_month">Last 30 days</string>
+    <string name="activity_range_all">All time</string>
+    <string name="activity_restore">Restore</string>
+    <string name="activity_restored">Spend restored</string>
+    <string name="activity_restore_failed">Can\'t restore: no budget to add it to</string>
+    <string name="activity_was">was %s</string>
+    <string name="activity_open_cd">Activity history</string>
+
+    <string name="act_spend_added">Added %s</string>
+    <string name="act_spend_quick">Quick-added %s</string>
+    <string name="act_spend_auto">Added %s (recurring)</string>
+    <string name="act_spend_edited">Edited a spend, now %s</string>
+    <string name="act_spend_deleted">Deleted %s</string>
+    <string name="act_spend_restored">Restored %s</string>
+    <string name="act_budget_added">Created budget “%s”</string>
+    <string name="act_budget_edited">Changed budget “%s”</string>
+    <string name="act_budget_paused">Paused “%s”</string>
+    <string name="act_budget_resumed">Resumed “%s”</string>
+    <string name="act_budget_deleted">Deleted budget “%s”</string>
+    <string name="act_budget_moved">Its spends moved to the main budget</string>
+    <string name="act_category_added">Added category “%s”</string>
+    <string name="act_category_edited">Edited category “%s”</string>
+    <string name="act_category_hidden">Hid category “%s”</string>
+    <string name="act_category_deleted">Deleted category “%s”</string>
+    <string name="act_category_restored">Brought back category “%s”</string>
+    <string name="act_category_shown">Showed category “%s”</string>
+    <string name="act_category_reordered">Reordered categories</string>
+    <string name="act_category_defaults">Restored the default categories</string>
+    <string name="act_recurring_added">Started repeating %s</string>
+    <string name="act_recurring_edited">Edited recurring %s</string>
+    <string name="act_recurring_paused">Paused recurring %s</string>
+    <string name="act_recurring_resumed">Resumed recurring %s</string>
+    <string name="act_recurring_skipped">Skipped %s once</string>
+    <string name="act_recurring_deleted">Stopped repeating %s</string>
+    <string name="act_payment_detected">Spotted a payment of %s</string>
+    <string name="act_payment_logged">Logged a payment of %s</string>
+    <string name="act_payment_ignored">Ignored a payment of %s</string>
+    <string name="act_setting_changed">Changed %1$s: %2$s</string>
+    <string name="act_data_exported">Exported a backup</string>
+    <string name="act_data_exported_csv">Exported spends as CSV</string>
+    <string name="act_data_imported">Imported a backup</string>
+    <string name="act_data_reset">Deleted all data</string>
+    <string name="act_on">On</string>
+    <string name="act_off">Off</string>
+    <string name="act_none">None</string>
+</resources>

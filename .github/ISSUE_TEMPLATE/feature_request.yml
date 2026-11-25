@@ -1,0 +1,18 @@
+name: Feature idea
+description: Suggest something that would make DayPurse better
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The problem or situation, not just the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+  - type: markdown
+    attributes:
+      value: DayPurse stays offline and private, so ideas that need internet access or accounts are out of scope.
