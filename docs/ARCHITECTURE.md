@@ -3,6 +3,15 @@
 DayPurse is a single-module Android app: Kotlin, Jetpack Compose (Material 3), Room, DataStore and coroutines.
 It has no network access, no background services and no dependency-injection framework.
 
+## Editions
+
+Two Gradle flavors share all code:
+
+- `full`: everything. `app/src/full/` adds the payment notification listener, its notification actions and the list
+  of payment apps it may look for.
+- `lite` (`in.bizappz.daypurse.lite`): no notification listener, so it never asks for notification access.
+  `R.bool.payment_spotting` is false, and the UI says where to get the full version instead.
+
 ## Packages
 
 ```

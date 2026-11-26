@@ -48,6 +48,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalResources
+import androidx.compose.ui.res.booleanResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -171,7 +172,8 @@ fun ActivityScreen(onBack: () -> Unit) {
                     }
                 }
                 FilterChip(selected = filter.kinds.isEmpty(), onClick = vm::clearKinds, label = { Text(stringResource(R.string.activity_filter_all)) })
-                ActivityKind.entries.forEach { kind ->
+                val paymentSpotting = booleanResource(R.bool.payment_spotting)
+                ActivityKind.entries.filter { paymentSpotting || it != ActivityKind.PAYMENT }.forEach { kind ->
                     FilterChip(
                         selected = kind in filter.kinds,
                         onClick = { vm.toggleKind(kind) },

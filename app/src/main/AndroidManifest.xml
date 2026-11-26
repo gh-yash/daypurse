@@ -7,32 +7,6 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
-    <!-- Only to show which supported payment apps are installed (Settings → Payment notifications). -->
-    <queries>
-        <package android:name="com.google.android.apps.nbu.paisa.user" />
-        <package android:name="com.phonepe.app" />
-        <package android:name="net.one97.paytm" />
-        <package android:name="in.org.npci.upiapp" />
-        <package android:name="in.amazon.mShop.android.shopping" />
-        <package android:name="com.dreamplug.androidapp" />
-        <package android:name="com.mobikwik_new" />
-        <package android:name="com.freecharge.android" />
-        <package android:name="com.naviapp" />
-        <package android:name="money.super.payments" />
-        <package android:name="com.sbi.lotusintouch" />
-        <package android:name="com.sbi.upi" />
-        <package android:name="com.snapwork.hdfc" />
-        <package android:name="com.csam.icici.bank.imobile" />
-        <package android:name="com.axis.mobile" />
-        <package android:name="com.msf.kbank.mobile" />
-        <package android:name="com.bankofbaroda.mconnect" />
-        <package android:name="com.idfcfirstbank.optimus" />
-        <package android:name="com.google.android.apps.messaging" />
-        <package android:name="com.samsung.android.messaging" />
-        <package android:name="com.android.mms" />
-        <package android:name="com.truecaller" />
-    </queries>
-
     <application
         android:name=".DayPurseApplication"
         android:allowBackup="false"
@@ -67,22 +41,6 @@
 
         <receiver
             android:name=".reminder.ReminderReplyReceiver"
-            android:exported="false" />
-
-        <!-- Reads payment notifications only after the user grants notification access. Exported
-             for the system to bind; the bind permission is held only by the system. -->
-        <service
-            android:name=".payments.PaymentListener"
-            android:exported="true"
-            android:label="@string/payments_title"
-            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
-            <intent-filter>
-                <action android:name="android.service.notification.NotificationListenerService" />
-            </intent-filter>
-        </service>
-
-        <receiver
-            android:name=".payments.PaymentActionReceiver"
             android:exported="false" />
 
         <!-- Home-screen widgets. -->
