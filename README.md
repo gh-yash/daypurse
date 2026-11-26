@@ -44,6 +44,22 @@ No internet permission. No accounts, ads or analytics. Your data never leaves yo
   spends. Kept for 90 days by default (configurable).
 - **Yours to keep.** JSON backup and restore, CSV export, biometric app lock, light/dark themes and accent colours.
 
+## Get DayPurse
+
+| Where | What you get |
+|---|---|
+| F-Droid | DayPurse (listing coming soon) |
+| Google Play | DayPurse (listing coming soon) |
+| [GitHub releases](https://github.com/gh-yash/daypurse/releases) | `DayPurse-<version>.apk` and `DayPurse-Lite-<version>.apk` |
+
+F-Droid installs the same APK, signed with the same key, as the GitHub release (it's
+[reproducible](docs/RELEASING.md#reproducible-builds)), so you can switch between them without losing data.
+
+**DayPurse Lite** is everything except payment spotting, so it never asks for notification access. In some
+countries, including India, Play Protect blocks installing apps that ask for notification access when the APK
+comes from a browser, chat app or file manager; Lite installs normally. It installs next to the full app; to move
+your data, use *Settings → Export backup* in one and *Restore from a backup* on the other's first screen.
+
 ## Privacy
 
 DayPurse has **no internet permission**, so it cannot send anything anywhere. There are no accounts, ads, analytics
@@ -66,23 +82,24 @@ Android 12 or newer.
 You need JDK 21 or newer and the Android SDK (Android Studio installs both).
 
 ```bash
-./gradlew testDebugUnitTest    # unit and Robolectric tests, no device needed
-./gradlew lintDebug            # Android lint
-./gradlew assembleDebug        # debug APK, installs next to the release app as "DayPurse (debug)"
-./gradlew assembleRelease      # release APK (signed if keystore.properties exists)
-./gradlew bundleRelease        # Play Store bundle (.aab)
+./gradlew testFullDebugUnitTest   # unit and Robolectric tests, no device needed
+./gradlew lintFullDebug           # Android lint
+./gradlew assembleFullDebug       # debug APK, installs next to the release app as "DayPurse (debug)"
+./gradlew assembleLiteDebug       # DayPurse Lite debug APK
+./gradlew assembleFullRelease     # release APK, reproducible (unsigned without keystore.properties)
+scripts/build-release.sh          # all signed release files: APKs for GitHub/F-Droid, bundle for Play
 ```
 
-To sign release builds, copy `keystore.properties.example` to `keystore.properties` and fill it in. Without it,
-release builds are unsigned, so the project builds anywhere.
+There are two editions (Gradle flavors): `full` and `lite`, which leaves out payment spotting. To sign release
+builds, copy `keystore.properties.example` to `keystore.properties` and fill it in.
 
 More: [architecture](docs/ARCHITECTURE.md) · [releasing](docs/RELEASING.md)
 
 ## Tech
 
 Kotlin, Jetpack Compose (Material 3), Room, DataStore and coroutines. No Google Play Services and no proprietary
-libraries. Manual dependency injection, no background services (one daily alarm if the reminder is on), and a
-release APK of under 4 MB.
+libraries. Manual dependency injection and no background services (one daily alarm if the reminder is on).
+Release builds are [reproducible](docs/RELEASING.md#reproducible-builds).
 
 ## Contributing
 

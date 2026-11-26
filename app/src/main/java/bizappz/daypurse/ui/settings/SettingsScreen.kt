@@ -61,6 +61,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.booleanResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -183,20 +184,26 @@ fun SettingsScreen(actions: AppActions, modifier: Modifier = Modifier) {
 
             item {
                 SettingsGroup(stringResource(R.string.settings_section_payments)) {
-                    // Re-checked on return from system settings, where access is granted or revoked.
-                    var hasAccess by remember { mutableStateOf(PaymentListener.hasAccess(context)) }
-                    LifecycleResumeEffect(Unit) { hasAccess = PaymentListener.hasAccess(context); onPauseOrDispose { } }
-                    val sources = remember { PaymentSettingsViewModel.installedSources(context) }
-                    val reading = sources.count { it.packageName !in settings.paymentSourcesOff }
-                    SettingRow(
-                        R.drawable.ic_notifications_active, stringResource(R.string.payments_title),
-                        when {
-                            !settings.paymentsEnabled -> stringResource(R.string.payments_hint_off)
-                            !hasAccess -> stringResource(R.string.payments_hint_no_access)
-                            else -> pluralStringResource(R.plurals.payments_hint_on, reading, reading)
-                        },
-                        onClick = actions.openPayments,
-                    )
+                    if (booleanResource(R.bool.payment_spotting)) {
+                        // Re-checked on return from system settings, where access is granted or revoked.
+                        var hasAccess by remember { mutableStateOf(PaymentListener.hasAccess(context)) }
+                        LifecycleResumeEffect(Unit) { hasAccess = PaymentListener.hasAccess(context); onPauseOrDispose { } }
+                        val sources = remember { PaymentSettingsViewModel.installedSources(context) }
+                        val reading = sources.count { it.packageName !in settings.paymentSourcesOff }
+                        SettingRow(
+                            R.drawable.ic_notifications_active, stringResource(R.string.payments_title),
+                            when {
+                                !settings.paymentsEnabled -> stringResource(R.string.payments_hint_off)
+                                !hasAccess -> stringResource(R.string.payments_hint_no_access)
+                                else -> pluralStringResource(R.plurals.payments_hint_on, reading, reading)
+                            },
+                            onClick = actions.openPayments,
+                        )
+                    } else {
+                        // DayPurse Lite: say where payment spotting is, rather than hiding it.
+                        SettingRow(R.drawable.ic_notifications_active, stringResource(R.string.payments_title),
+                            stringResource(R.string.payments_lite_hint), onClick = { openLink(context, "$SOURCE_URL#get-daypurse") })
+                    }
                 }
             }
 

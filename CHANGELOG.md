@@ -20,6 +20,8 @@ First public release.
 - Daily reminder you can reply to ("120 food"), skipped on days you've already logged.
 - History, insights and an activity history with filters, search and restore.
 - Categories, JSON backup and restore, CSV export, app lock, themes and accent colours.
+- DayPurse Lite: the same app without payment spotting, for installing the APK directly.
+- Reproducible builds, so F-Droid can ship the same signed APK as the GitHub release.
 
 [Unreleased]: https://github.com/gh-yash/daypurse/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/gh-yash/daypurse/releases/tag/v1.0.0

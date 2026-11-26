@@ -24,8 +24,11 @@ For security problems, see [SECURITY.md](SECURITY.md) instead.
 See [Build](README.md#build) in the README. Before opening a pull request, run:
 
 ```bash
-./gradlew testDebugUnitTest lintDebug
+./gradlew testFullDebugUnitTest lintFullDebug lintLiteDebug
 ```
+
+Payment spotting lives only in the full edition (`app/src/full/`); everything else is shared. Check that
+DayPurse Lite still builds (`./gradlew assembleLiteDebug`) when you touch payment code.
 
 ## Code
 

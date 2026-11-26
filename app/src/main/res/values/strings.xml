@@ -340,6 +340,7 @@
     <!-- Payment notifications -->
     <string name="settings_section_payments">Payments</string>
     <string name="payments_title">Payment notifications</string>
+    <string name="payments_lite_hint">Not in DayPurse Lite. Get the full version from F-Droid or Google Play to spot UPI and bank payments.</string>
     <string name="payments_hint_off">Spot payments in UPI and bank notifications</string>
     <plurals name="payments_hint_on">
         <item quantity="one">On · reading %d app</item>

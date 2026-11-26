@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DayPurse Lite: everything except payment spotting (no notification access). -->
+    <bool name="payment_spotting">false</bool>
+    <string name="app_name" translatable="false">DayPurse Lite</string>
+</resources>
