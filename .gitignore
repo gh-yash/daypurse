@@ -2,15 +2,21 @@
 .gradle/
 .kotlin/
 build/
-/captures
-.externalNativeBuild
-.cxx
+/captures/
+.externalNativeBuild/
+.cxx/
 
 # Local machine config (SDK path, signing secrets)
 local.properties
 keystore.properties
+
+# Signing keys and key exports (e.g. for Play App Signing): never commit these
 *.jks
 *.keystore
+*.p12
+*.pem
+*.pepk
+pepk*.jar
 
 # IDEs and OS files
 .idea/
@@ -19,7 +25,19 @@ keystore.properties
 .DS_Store
 Thumbs.db
 
+# Logs, heap dumps, Python caches from scripts/
+*.log
+*.hprof
+__pycache__/
+
+# Fastlane tool output (only fastlane/metadata/ is tracked)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
 # Release artifacts built locally
 /release/
 *.apk
+*.apks
 *.aab
