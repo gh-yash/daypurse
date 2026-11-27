@@ -88,7 +88,7 @@ First release only: open a merge request to [fdroiddata](https://gitlab.com/fdro
 
 ```yaml
 Categories:
-  - Money
+  - Finance Manager
 License: GPL-3.0-or-later
 AuthorName: Yash Kumar
 SourceCode: https://github.com/gh-yash/daypurse
@@ -99,7 +99,6 @@ AutoName: DayPurse
 
 RepoType: git
 Repo: https://github.com/gh-yash/daypurse.git
-# Reproducible: F-Droid ships the developer-signed APK from the GitHub release when its build matches.
 Binaries: https://github.com/gh-yash/daypurse/releases/download/v%v/DayPurse-%v.apk
 
 Builds:
@@ -118,7 +117,10 @@ CurrentVersion: 1.0.0
 CurrentVersionCode: 1
 ```
 
-`AllowedAPKSigningKeys` is the SHA-256 of your signing certificate; `build-release.sh` prints it. If you switch to a
+`Binaries` makes F-Droid ship the developer-signed APK from the GitHub release when its own build matches it.
+`AllowedAPKSigningKeys` is the SHA-256 of your signing certificate; `build-release.sh` prints it. Categories must
+come from fdroiddata's `config/categories.yml`, and the file must match `fdroid rewritemeta` formatting (no
+comments, ends with a newline), or the merge request's checks fail. If you switch to a
 new key before the first release, update it here.
 
 After that, F-Droid picks up new version tags automatically, as long as the GitHub release with the APK is published
