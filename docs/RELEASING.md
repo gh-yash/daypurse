@@ -83,8 +83,10 @@ DayPurse Lite is not published on Play: it would be a near-duplicate app, which 
 
 ## 5. F-Droid
 
-First release only: open a merge request to [fdroiddata](https://gitlab.com/fdroid/fdroiddata) adding
-`metadata/in.bizappz.daypurse.yml`:
+First release only: open a merge request to [fdroiddata](https://gitlab.com/fdroid/fdroiddata) (target branch
+`master`) adding `metadata/in.bizappz.daypurse.yml`. F-Droid's
+[inclusion policy](https://f-droid.org/docs/Inclusion_Policy/) asks for at least 3 months of active development
+before an app is included, so put the latest release in the file when you submit:
 
 ```yaml
 Categories:
@@ -104,7 +106,7 @@ Binaries: https://github.com/gh-yash/daypurse/releases/download/v%v/DayPurse-%v.
 Builds:
   - versionName: 1.0.0
     versionCode: 1
-    commit: v1.0.0
+    commit: 888cbc4d4033dffe2e7e627ccf56925b5210746e
     subdir: app
     gradle:
       - full
@@ -120,8 +122,11 @@ CurrentVersionCode: 1
 `Binaries` makes F-Droid ship the developer-signed APK from the GitHub release when its own build matches it.
 `AllowedAPKSigningKeys` is the SHA-256 of your signing certificate; `build-release.sh` prints it. Categories must
 come from fdroiddata's `config/categories.yml`, and the file must match `fdroid rewritemeta` formatting (no
-comments, ends with a newline), or the merge request's checks fail. If you switch to a
-new key before the first release, update it here.
+comments, ends with a newline), or the merge request's checks fail. `commit` must be the full hash of the
+release tag (`git rev-parse v1.2.3^{commit}`), not the tag name.
+
+Use the merge request template's checklist. To show reviewers that you are the developer, say so in the
+description and link your GitHub and GitLab profiles to each other.
 
 After that, F-Droid picks up new version tags automatically, as long as the GitHub release with the APK is published
 first. The store text and screenshots come from `fastlane/metadata/` in this repository. DayPurse Lite isn't listed
